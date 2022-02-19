@@ -1,0 +1,27 @@
+{
+  "name": "@dwlib/primordials",
+  "version": "1.0.0",
+  "description": "Primordials",
+  "main": "lib/index.js",
+  "exports": {
+    "require": "./lib/index.js",
+    "import": "./lib/index.mjs"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dwlib-js/primordials.git"
+  },
+  "keywords": [
+    "primordials"
+  ],
+  "author": "Pavel Wolf",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dwlib-js/primordials/issues"
+  },
+  "homepage": "https://github.com/dwlib-js/primordials#readme"
+}
