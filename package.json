@@ -1,11 +1,32 @@
 {
   "name": "@dwlib/primordials",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Primordials",
   "main": "lib/index.js",
+  "imports": {
+    "#intrinsics/*": "@dwlib/intrinsics/abstract/*",
+    "#abstract/*": {
+      "require": "./lib/abstract/*.js",
+      "import": "./lib/abstract/*.mjs"
+    }
+  },
   "exports": {
-    "require": "./lib/index.js",
-    "import": "./lib/index.mjs"
+    ".": {
+      "require": "./lib/index.js",
+      "import": "./lib/index.mjs"
+    },
+    "./*": {
+      "require": "./lib/*.js",
+      "import": "./lib/*.mjs"
+    },
+    "./abstract": {
+      "require": "./lib/abstract/index.js",
+      "import": "./lib/abstract/index.mjs"
+    },
+    "./abstract/*": {
+      "require": "./lib/abstract/*.js",
+      "import": "./lib/abstract/*.mjs"
+    }
   },
   "files": [
     "lib"
@@ -23,5 +44,8 @@
   "bugs": {
     "url": "https://github.com/dwlib-js/primordials/issues"
   },
-  "homepage": "https://github.com/dwlib-js/primordials#readme"
+  "homepage": "https://github.com/dwlib-js/primordials#readme",
+  "dependencies": {
+    "@dwlib/intrinsics": "^1.0.2"
+  }
 }
